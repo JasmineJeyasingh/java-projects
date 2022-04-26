@@ -1,5 +1,7 @@
 package com.lc101.jasmine.studios.restaurantmenu;
 
+import java.util.Objects;
+
 public class MenuItem {
     private String name;
     private double price;
@@ -49,5 +51,18 @@ public class MenuItem {
         String output = "";
         output += this.name + "\n" + this.price + "\n" + this.category + "\n" + this.isNew;
         return output;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MenuItem menuItem = (MenuItem) o;
+        return Double.compare(menuItem.price, price) == 0 && isNew == menuItem.isNew && name.equals(menuItem.name) && category.equals(menuItem.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, category, isNew);
     }
 }

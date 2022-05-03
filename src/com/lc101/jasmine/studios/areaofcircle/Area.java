@@ -7,7 +7,8 @@ public class Area {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the Radius: ");
         String radius = input.nextLine();
-        if(radius.matches("[a-zA-Z]+") || radius.matches("[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+")) {
+        if(radius.matches("[a-zA-Z]+") ||
+                radius.matches("[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]+")) {
             System.out.println("Invalid input");
             System.exit(0);
         }

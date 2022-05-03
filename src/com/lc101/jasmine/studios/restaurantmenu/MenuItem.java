@@ -63,6 +63,7 @@ public class MenuItem {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, price, category, isNew);
+//        return Objects.hash(name, price, category, isNew);
+        return 12;
     }
 }

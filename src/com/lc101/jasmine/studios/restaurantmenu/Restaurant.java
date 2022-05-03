@@ -6,12 +6,13 @@ public class Restaurant {
         MenuItem items = new MenuItem("pizza", 6.0, "lunch", true);
         MenuItem items1 = new MenuItem("pizza", 6.0, "lunch", true);
 
-        //System.out.println(items);
+//        System.out.println(items);
         myMenu.addItem(items);
         myMenu.addItem(items1);
 //        myMenu.removeItem(items);
         myMenu.printMenu(3);
         System.out.println(items.equals(items));
+        System.out.println(items == items1);
 
     }
 }
